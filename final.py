@@ -21,7 +21,8 @@ def k_nearest_neighbours(data,predict,k):
     #print(sorted(distances))
     votes=[]
     for i in sorted(distances)[:k]:
-         votes.append(i[1])
+        print(i)
+        votes.append(i[1])
     #print(votes)
 
     cnt=Counter(votes)
@@ -66,7 +67,6 @@ if vote==-1:
 correct=0
 total=0
 
-'''
 #finding the accuracy
 
 for group in test_set:
@@ -82,5 +82,3 @@ accuracy=correct/total*100
 print("Accuracy=",accuracy)
 end=time.time()
 print("Time elapsed=",round((end-start),2),"seconds")
-
-'''
